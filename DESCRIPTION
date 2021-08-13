@@ -1,0 +1,58 @@
+Package: HPiP
+Type: Package
+Title: Host-Pathogen Interaction Prediction
+Version: 0.99.7
+Authors@R: c(
+    person("Matineh", "Rahmatbakhsh", ,"matinerb.94@gmail.com",c("aut","trl","cre")),
+    person("Mohan", "Babu", ,"mohan.babu@uregina.ca", c("led")))
+Description: HPiP (Host-Pathogen Interaction Prediction) uses an ensemble learning 
+    algorithm for prediction of host-pathogen protein-protein interactions (HP-PPIs) 
+    using structural and physicochemical descriptors computed from amino 
+    acid-composition of host and pathogen proteins.The proposed package can effectively address 
+    data shortages and data unavailability for HP-PPI network reconstructions. 
+    Moreover, establishing computational frameworks in that regard will reveal 
+    mechanistic insights into infectious diseases and suggest potential HP-PPI targets, 
+    thus narrowing down the range of possible candidates for subsequent wet-lab experimental validations.
+Depends: 
+    R (>= 4.1)
+Imports: 
+    dplyr (>= 1.0.6),
+    httr (>= 1.4.2),
+    readr,
+    tidyr,
+    tibble,
+    utils,
+    stringr,
+    magrittr,
+    caret,
+    corrplot,
+    ggplot2,
+    pROC,
+    PRROC,
+    igraph,
+    graphics,
+    stats,
+    purrr
+License: GPL-3
+Encoding: UTF-8
+VignetteBuilder: knitr
+Suggests:
+    knitr,
+    rmarkdown,
+    colorspace,
+    protr,
+    e1071,
+    randomForest,
+    gprofiler2,
+    gridExtra,
+    ggthemes,
+    kableExtra,
+    BiocStyle
+biocViews: 
+    Proteomics,
+    SystemsBiology,
+    NetworkInference,
+    StructuralPrediction,
+    GenePrediction,
+    Network
+RoxygenNote: 7.1.1
