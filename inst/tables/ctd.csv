@@ -1,0 +1,17 @@
+﻿Sl,Property,Group 1,Group 2,Group 3
+1,Charge,Neutral,Negatively charged,Positively charged
+,Amino acids,"A,C,F,G,H,I,L,M,N,P,Q,S,
+T,V,W,Y","D,E","K,R"
+2,Hydrophobicity,Hydrophobicity,Neutral,Polar
+,Amino acids,"C,F,I,L,M,V,W","A,G,H,P,S,T,Y","D,E,K,N,Q,R"
+3,"Normalized vander Waals
+volume",0-2.78,2.95-4.0,4.03-8.08
+,Amino acids,"A,C,D,G,P,S,T","E,I,L,N,Q,V","F,H,K,M,R,W,Y"
+4,Polarity,4.9-6.2,8.0-9.2,10.4-13.0
+,Amino acids,"C,F,I,L,M,V,W,Y","A,G,P,S,T","D,E,H,K,N,Q,R"
+5,Polariizability,0 - .108,0.128-0.186,0.219-0.409
+,Amino acids,"A,D,G,S,T","C,E,I,L,N,P,Q,V","F,H,K,M,R,W,Y"
+6,Secondary Structure,Coil,Helix,Strand
+,Amino acids,"D,G,N,P,S","A,E,H,K,L,M,Q,R","C,F,I,T,V,W,Y"
+7,Solvent Accessibility,Buried,Intermediate,Exposed
+,Amino acids,"A,C,F,G,I,L,V,W","H,M,P,S,T,Y","D,E,K,N,R,Q"
