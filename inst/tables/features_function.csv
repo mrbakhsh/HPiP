@@ -1,0 +1,21 @@
+﻿Descriptor  name ,Lengh vectors,Function 
+Amino Acid Composition,20,calculateAAC()
+"Dipeptide Composition	",400,calculateDC()
+"Tripeptide Composition	",8000,calculateTC()
+Tripeptide Composition (TC) Descriptor from Biochemical Similarity Classes,216,calculateTC_Sm()
+Quadruples Composition (QC) Descriptor from Biochemical Similarity Classes,1296,calculateQD_Sm()
+F1,20,calculateF1()
+F2,20,calculateF2()
+Composition ,21,calculateCTDC()
+Transition,21,calculateCTDT()
+Distribution,105,calculateCTDD()
+"Conjoint Triad	",343,calculateCTriad()
+"Geary autocorrelation
+(Default nlag = 30)",240,calculateGeary()
+"Moran autocorrelation
+(Default nlag = 30)",240,calculateMoran()
+"Normalized Moreau_Broto
+autocorrelation
+(Default nlag = 30)",240,calculateMoreauBroto()
+k-Spaced Amino Acid Pairs,400,calculateKSAAP()
+Binary encoding,400,calculateBE()
