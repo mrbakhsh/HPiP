@@ -718,7 +718,7 @@ when the `plots` argument set to TRUE, the `pred_ensembel` function generates th
       <p align="right"> **Figure 9: ROC_Curve curve.**
     
     
-#### **Results of the prediction**
+### **Results of the prediction**
 Following PPI prediction, users can visualize the predicted PPI network using `plotPPI` and `FreqInteractors` functions.
     
 - The `plotPPI` function, which is based on the *igraph* plotting function [@csardi2013package], provide visualization on interacting host protein partners of pathogen proteins. For instance, to get the PPI network of SARS-CoV2-E-human, we can run the following command:
@@ -751,7 +751,7 @@ FreqInteractors(ppi,cex.size = 12)
 
 
 
-#### **GO Enrichment Analysis**
+### **GO Enrichment Analysis**
 To identify significantly enriched annotation terms in predicted interacting host protein partners of each pathogen protein, we can use the `enrichfindP` function based on the *g:Profiler* tool [@kolberg2020gprofiler2]. The following command performs functional enrichment analysis:
 
 ```{r, eval = FALSE}
