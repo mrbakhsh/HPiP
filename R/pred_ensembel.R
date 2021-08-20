@@ -72,9 +72,8 @@
 #' classifiers within the ensemble via average to enhance prediction.
 #' @export
 #' @examples
-#' # load the independent data set
+#' # load the data containing features
 #' ind_data <- readRDS(system.file("examples/IndependentData_withFeatures.rds", package = "HPiP"))
-#' # select important features
 #' # load the gold-standard data set
 #' gd <- readRDS(system.file("examples/Gold_ReferenceSet.rds", package = "HPiP"))
 #' # select PPI and class label
