@@ -33,15 +33,15 @@
         x$xaxis <- 1
 
         print(ggplot(x, aes(xaxis, term_name, color = -log10(p_value))) +
-                geom_point(aes(xaxis, term_name, size = intersection_size),
-                           stroke = 1, show.legend = TRUE
-                ) +
-                scale_colour_gradient2(low = low, high = high) +
-                theme_bw() +
-                scale_x_continuous(expand = c(0, 0), limits = c(1, 1)) +
-                theme(text = element_text(size = cex.size, color = "#000000")) +
-                theme(axis.text.y = element_text(color = "#000000")) +
-                theme(axis.ticks.x = element_blank()) +
-                theme(axis.text.x = element_blank()) +
-                labs(title = "", x = "", y = "term_name"))
+          geom_point(aes(xaxis, term_name, size = intersection_size),
+            stroke = 1, show.legend = TRUE
+          ) +
+          scale_colour_gradient2(low = low, high = high) +
+          theme_bw() +
+          scale_x_continuous(expand = c(0, 0), limits = c(1, 1)) +
+          theme(text = element_text(size = cex.size, color = "#000000")) +
+          theme(axis.text.y = element_text(color = "#000000")) +
+          theme(axis.ticks.x = element_blank()) +
+          theme(axis.text.x = element_blank()) +
+          labs(title = "", x = "", y = "term_name"))
       }
