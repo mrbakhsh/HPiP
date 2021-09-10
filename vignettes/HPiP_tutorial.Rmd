@@ -1147,19 +1147,19 @@ to individual base learners
 
 
 - The first plot shows the Receiver Operating Characteristic (ROC) curve.
-<img src="Figures/ROC_Curve.png" width="100%" 
+<img src="Figures/ROC_Curve_new.png" width="100%" 
 class="img-responsive" align="center">
   <p align="right"> **Figure 4: ROC_Curve curve.**
   
 - The second plot shows the Precision-Recall (PR) curve 
-<img src="Figures/pr-curve.png" width="100%" 
+<img src="Figures/pr-curve_new.png" width="100%" 
 class="img-responsive" align="center">
   <p align="right"> **Figure 5: Precision-Recall (PR) curve.**
   
 - The third plot shows the accuracy (ACC), F1-score ,positive predictive value 
 (PPV),sensitivity (SE),and Matthews correlation coefficient (MCC)
 of ensemble classifier vs selected individual classifiers.
-<img src="Figures/point_plot.png" width="100%" 
+<img src="Figures/point_plot_new.png" width="100%" 
 class="img-responsive" align="center">
   <p align="right"> **Figure 6: Point plot.**
 
