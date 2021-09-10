@@ -2,13 +2,14 @@
 % Please edit documentation in R/FreqInteractors.R
 \name{FreqInteractors}
 \alias{FreqInteractors}
-\title{Plot the Pathogen Proteins' Frequency of Interactions with Host Proteins}
+\title{Plot the Pathogen Proteins' frequency of Interactions with Host
+Proteins}
 \usage{
 FreqInteractors(ppi, cex.size = 12)
 }
 \arguments{
-\item{ppi}{A data.frame containing pathogen proteins in the first column and host
-proteins in the second column.}
+\item{ppi}{A data.frame containing pathogen proteins in the first column
+and host proteins in the second column.}
 
 \item{cex.size}{Text size.}
 }
@@ -16,7 +17,8 @@ proteins in the second column.}
 A frequency plot.
 }
 \description{
-This function plots the pathogen proteins' Frequency of interactions with host proteins
+This function plots the pathogen proteins' Frequency of
+interactions with host proteins
 }
 \details{
 FreqInteractors

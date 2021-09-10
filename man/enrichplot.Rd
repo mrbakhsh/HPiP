@@ -25,15 +25,15 @@ This function plots the enrichment result.
 enrichplot
 }
 \examples{
-enrich.result <- readRDS(system.file("examples/enirchment_result.rds", package = "HPiP"))
-enrichplot(enrich.result,
-    low = "blue",
-    high = "red",
-    cex.size = 12
-)
+data('enrich.df')
+#select enrichment for one of the example (e.g., E protein)
+enrich.df <-
+enrich.df[enrich.df$id == "E:P0DTC4", ]
+enrichplot(enrich.df, low = "blue", high = "red", cex.size = 10)
 }
 \seealso{
-See \code{\link{enrichfindP}} for functional enrichment analysis.
+See \code{\link{enrichfindP}} for functional enrichment
+analysis.
 }
 \author{
 Matineh Rahmatbakhsh, \email{matinerb.94@gmail.com}

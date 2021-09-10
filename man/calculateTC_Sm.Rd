@@ -2,40 +2,42 @@
 % Please edit documentation in R/calculateTC_Sm.R
 \name{calculateTC_Sm}
 \alias{calculateTC_Sm}
-\title{Calculate Tripeptide Composition (TC) Descriptor from Biochemical Similarity Classes}
+\title{Calculate Tripeptide Composition (TC) Descriptor from Biochemical
+Similarity Classes}
 \usage{
 calculateTC_Sm(x)
 }
 \arguments{
-\item{x}{A data.frame containing gene/protein names and their fasta sequences.}
+\item{x}{A data.frame containing gene/protein names and their fasta
+sequences.}
 }
 \value{
 A length 216  named vector for the data input.
 }
 \description{
-This function calculates Tripeptide Composition (TC) descriptor from biochemical similarity classes.
+This function calculates Tripeptide Composition (TC)
+descriptor from biochemical similarity classes.
 }
 \details{
 calculateTC_Sm
 }
 \examples{
-x <- readRDS(
-    system.file("protseq/UP000464024_FASTAList.rds", package = "HPiP")
-)
-x_df <- calculateTC_Sm(x)
+data(UP000464024_df)
+x_df <- calculateTC_Sm(UP000464024_df)
 head(x_df, n = 2L)
 }
 \references{
-Ahmed, I., Witbooi, P., and Christoffels, A. (2018). Prediction of human-Bacillus
-anthracis protein–protein interactions using multi-layer neural network.
-\emph{Bioinformatics} 34, 4159–4164.
+Ahmed, I., Witbooi, P., and Christoffels, A. (2018). Prediction of
+human-Bacillus anthracis protein–protein interactions using multi-layer
+neural network.\emph{Bioinformatics} 34, 4159–4164.
 
 Cui, G., Fang, C., and Han, K. (2012). Prediction of protein-protein
 interactions between viruses and human by an SVM model.
 \emph{BMC bioinformatics}, 1–10.
 }
 \seealso{
-See \code{\link{calculateTC}} for Tripeptide Composition descriptor.
+See \code{\link{calculateTC}} for Tripeptide Composition
+descriptor.
 }
 \author{
 Matineh Rahmatbakhsh, \email{matinerb.94@gmail.com}
