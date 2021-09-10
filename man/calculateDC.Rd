@@ -7,22 +7,22 @@
 calculateDC(x)
 }
 \arguments{
-\item{x}{A data.frame containing gene/protein names and their fasta sequences.}
+\item{x}{A data.frame containing gene/protein names and their fasta
+sequences.}
 }
 \value{
 A length 400 named vector for the data input.
 }
 \description{
-This function calculates Dipeptide Composition (DC) descriptor for data input.
+This function calculates Dipeptide Composition (DC)
+descriptor for data input.
 }
 \details{
 calculateDC
 }
 \examples{
-x <- readRDS(
-    system.file("protseq/UP000464024_FASTAList.rds", package = "HPiP")
-)
-x_df <- calculateDC(x)
+data(UP000464024_df)
+x_df <- calculateDC(UP000464024_df)
 head(x_df, n = 2L)
 }
 \references{

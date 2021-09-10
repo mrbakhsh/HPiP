@@ -7,32 +7,34 @@
 calculateAAC(x)
 }
 \arguments{
-\item{x}{A data.frame containing gene/protein names and their fasta sequences.}
+\item{x}{A data.frame containing gene/protein names and their
+fasta sequences.}
 }
 \value{
 A length 20 named vector for the data input.
 }
 \description{
-This function calculates Amino Acid Composition (AAC) descriptor for the data input.
+This function calculates Amino Acid Composition
+(AAC) descriptor for the data input.
 }
 \details{
 calculateAAC
 }
 \examples{
-x <- readRDS(
-    system.file("protseq/UP000464024_FASTAList.rds", package = "HPiP")
-)
-x_df <- calculateAAC(x)
+data(UP000464024_df)
+x_df <- calculateAAC(UP000464024_df)
 head(x_df, n = 2L)
 }
 \references{
-Dey, L., Chakraborty, S., and Mukhopadhyay, A. (2020). Machine learning techniques
-for sequence-based prediction of viral–host interactions between SARS-CoV-2 and human proteins.
+Dey, L., Chakraborty, S., and Mukhopadhyay, A. (2020).
+Machine learning techniques for sequence-based prediction of
+viral–host interactions between SARS-CoV-2 and human proteins.
 \emph{Biomed. J.} 43, 438–450.
 }
 \seealso{
-See \code{\link{calculateDC}} and \code{\link{calculateTC}}
-for Dipeptide Composition and Tripeptide Composition descriptors.
+See \code{\link{calculateDC}} and
+\code{\link{calculateTC}} for Dipeptide Composition and
+Tripeptide Composition descriptors.
 }
 \author{
 Matineh Rahmatbakhsh, \email{matinerb.94@gmail.com}

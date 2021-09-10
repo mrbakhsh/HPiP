@@ -2,33 +2,34 @@
 % Please edit documentation in R/calculateQD_Sm.R
 \name{calculateQD_Sm}
 \alias{calculateQD_Sm}
-\title{Calculate Quadruples Composition (QC) Descriptor from Biochemical Similarity Classes}
+\title{Calculate Quadruples Composition (QC) Descriptor from
+Biochemical Similarity Classes}
 \usage{
 calculateQD_Sm(x)
 }
 \arguments{
-\item{x}{A data.frame containing gene/protein names and their fasta sequences.}
+\item{x}{A data.frame containing gene/protein names and their fasta
+sequences.}
 }
 \value{
 A length 1296  named vector for the data input.
 }
 \description{
-This function calculates Quadruples Composition (QC) descriptor from biochemical similarity classes.
+This function calculates Quadruples Composition (QC)
+descriptor from biochemical similarity classes.
 }
 \details{
 calculateQD_Sm
 }
 \examples{
-x <- readRDS(
-    system.file("protseq/UP000464024_FASTAList.rds", package = "HPiP")
-)
-x_df <- calculateQD_Sm(x)
+data(UP000464024_df)
+x_df <- calculateQD_Sm(UP000464024_df)
 head(x_df, n = 2L)
 }
 \references{
-Ahmed, I., Witbooi, P., and Christoffels, A. (2018). Prediction of human-Bacillus
-anthracis protein–protein interactions using multi-layer neural network.
-\emph{Bioinformatics} 34, 4159–4164.
+Ahmed, I., Witbooi, P., and Christoffels, A. (2018). Prediction of
+human-Bacillus anthracis protein–protein interactions using
+multi-layer neural network.\emph{Bioinformatics} 34, 4159–4164.
 }
 \author{
 Matineh Rahmatbakhsh, \email{matinerb.94@gmail.com}

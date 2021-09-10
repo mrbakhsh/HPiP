@@ -9,7 +9,8 @@ corr_plot(cormat, method = "number", cex = 0.9)
 \arguments{
 \item{cormat}{A correlation matrix.}
 
-\item{method}{The visualization method of correlation matrix; defaults to number.
+\item{method}{The visualization method of correlation matrix;
+defaults to number.
 See \code{\link[corrplot]{corrplot}} for more details.}
 
 \item{cex}{The size of x/y axis label.}
@@ -24,11 +25,13 @@ A graphical display of a correlation matrix.
 corr_plot
 }
 \examples{
-x <- readRDS(system.file("protseq/UP000464024_FASTAList.rds", package = "HPiP"))
-x <- calculateAAC(x)
-x <- x[, -1]
-x_cor <- cor(as.matrix(x))
-corr_plot(x_cor, method = "square", cex = 0.9)
+data('example_data')
+x <- na.omit(example_data)
+#perform feature selection
+s <- FSmethod(x, type = 'both',
+cor.cutoff = 0.7, resampling.method = "repeatedcv",
+iter = 5, repeats = 3, metric = "ROC", verbose = TRUE)
+corr_plot(s$cor.result$corProfile, method = 'square' , cex = 0.5)
 }
 \author{
 Matineh Rahmatbakhsh, \email{matinerb.94@gmail.com}.

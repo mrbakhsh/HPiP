@@ -9,16 +9,17 @@ filter_missing_values(x, max_miss_rate = 20)
 \arguments{
 \item{x}{A numeric matrix as input.}
 
-\item{max_miss_rate}{Maximal missing rate allow for a feature;default is 20.}
+\item{max_miss_rate}{Maximal missing rate allowed for a feature;default
+is 20.}
 }
 \value{
-A dataframe with features with missingness rate of more than user-defined
-threshold.
+A dataframe with features with missingness rate of more than
+user-defined threshold.
 }
 \description{
-Given an input matrix, compute the missingness rate for each
-features and keep only features with missing rate more than user-defined
-percentage.
+Given an input matrix, compute the missingness rate for
+each features and keep only features with missing rate more than
+user-defined percentage.
 }
 \details{
 filter_missing_values

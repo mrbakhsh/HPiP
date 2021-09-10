@@ -2,26 +2,49 @@
 % Please edit documentation in R/get_positivePPI.R
 \name{get_positivePPI}
 \alias{get_positivePPI}
-\title{Get Positive Reference Host-Pathogen Protein-Protein Interactions (HP-PPIs)}
+\title{Fetch Positive Reference Host-Pathogen Protein-Protein
+Interactions (HP-PPIs) from the BioGRID Database}
 \usage{
-get_positivePPI(organism.taxID = 2697049)
+get_positivePPI(
+  organism.taxID = 2697049,
+  access.key = "81bb3b5a6bd9a8084a7be71f0963ab1e",
+  filename = "PositiveInt.RData",
+  path = "PositiveInt"
+)
 }
 \arguments{
-\item{organism.taxID}{Taxonomy identifier for the pathogen. All identifiers are
-available at \url{http://webservice.thebiogrid.org/organisms/?accessKey=81bb3b5a6bd9a8084a7be71f0963ab1e}.}
+\item{organism.taxID}{Taxonomy identifier for the pathogen.}
+
+\item{access.key}{Access key for using BioGRID webpage. To retrieve
+interactions from the BioGRID database, the users are first required to
+register for access key at
+\url{https://webservice.thebiogrid.org/}.}
+
+\item{filename}{A character string, indicating the output filename as an
+RData object to store the retrieved interactions.}
+
+\item{path}{A character string indicating the path to the project
+directory that contains the interaction data. If the directory is
+missing, it will be stored in the current directory.
+Default is PositiveInt.}
 }
 \value{
-A Data.frame containing true positive protein-protein interactions for the selected
-pathogen.
+A Data.frame containing true positive protein-protein
+interactions for the selected pathogen.
 }
 \description{
-Get positive reference host-pathogen protein-protein interactions from BioGRID.
+This function retrieves positive reference host-pathogen
+protein-protein interactions directly from BioGRID database.
 }
 \details{
 get_positivePPI
 }
 \examples{
-positive_reflists <- get_positivePPI(organism.taxID = 2697049)
+local = tempdir()
+positive_reflists <- get_positivePPI(organism.taxID = 2697049,
+access.key = '81bb3b5a6bd9a8084a7be71f0963ab1e',
+filename = "PositiveInt.RData",
+path = local)
 }
 \seealso{
 See \code{\link{get_negativePPI}} for generating negative
