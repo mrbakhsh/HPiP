@@ -171,7 +171,7 @@
           .$as.integer.x.
         if (x == 2) {
           x_train$class <- factor(x_train$class,
-                                  levels = rev(levels(x_train$class))
+            levels = rev(levels(x_train$class))
           )
         }
 
@@ -191,12 +191,12 @@
         for (ml in classifier) {
           message(ml)
           suppressMessages(models <-
-                             train(class ~ .,
-                                   data = x_train,
-                                   method = ml,
-                                   metric = "Accuracy",
-                                   trControl = trControl
-                             ))
+            train(class ~ .,
+              data = x_train,
+              method = ml,
+              metric = "Accuracy",
+              trControl = trControl
+            ))
 
           clcol <- which(names(p.data) == "PPI")
           preds <- # predict on new data
@@ -291,7 +291,7 @@
             df_perf.response <- df_perf
             df_perf.response[, i] <-
               as.factor(ifelse(df_perf.response[, i] > 0.5,
-                               "Positive", "Negative"
+                "Positive", "Negative"
               ))
             x <- unique(df_perf.response[, i])
             x <- data.frame(x, as.integer(x))
@@ -302,7 +302,7 @@
             if (x == 2) {
               df_perf.response[, i] <-
                 factor(df_perf.response[, i],
-                       levels = rev(levels(df_perf.response[, i]))
+                  levels = rev(levels(df_perf.response[, i]))
                 )
             }
 
@@ -316,7 +316,7 @@
               .$as.integer.x.
             if (x == 2) {
               ss1[, j] <- factor(ss1[, j],
-                                 levels = rev(levels(ss1[, j]))
+                levels = rev(levels(ss1[, j]))
               )
             }
             cm <-
@@ -415,8 +415,8 @@
               xlab("Recall") +
               ylab("Percision") +
               annotation_custom(gridExtra::tableGrob(pr.auc.list,
-                                                     rows = NULL,
-                                                     theme = mytheme
+                rows = NULL,
+                theme = mytheme
               ),
               xmin = unit(0.9, "npc"),
               xmax = unit(0.9, "npc"), ymin = 0.22, ymax = 0.22
@@ -505,8 +505,8 @@
             xlab("False Positive Rate (1-Specificity)") +
             ylab("True Positive Rate (Sensitivity)") +
             annotation_custom(gridExtra::tableGrob(auc.list,
-                                                   rows = NULL,
-                                                   theme = mytheme
+              rows = NULL,
+              theme = mytheme
             ),
             xmin = unit(0.8, "npc"),
             xmax = unit(0.8, "npc"), ymin = 0.22, ymax = 0.22

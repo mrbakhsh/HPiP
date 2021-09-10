@@ -52,16 +52,16 @@
 
       for (i in seq_len(1296)) {
         tmp <- as.vector(outer(classes[[vspace[i, 1]]],
-                               classes[[vspace[i, 2]]], paste,
-                               sep = ""
+          classes[[vspace[i, 2]]], paste,
+          sep = ""
         ))
         tmp2 <- as.vector(outer(tmp,
-                                classes[[vspace[i, 3]]], paste,
-                                sep = ""
+          classes[[vspace[i, 3]]], paste,
+          sep = ""
         ))
         BSlict[[i]] <- as.vector(outer(tmp2,
-                                       classes[[vspace[i, 4]]], paste,
-                                       sep = ""
+          classes[[vspace[i, 4]]], paste,
+          sep = ""
         ))
       }
       names(BSlict) <- paste(seq_along(BSlict))
@@ -73,11 +73,11 @@
           lapply(., function(x) strsplit(x[[1]], "")) %>%
           lapply(., function(x) {
             paste(paste(x[[1]][-c(length(x[[1]]), length(x[[1]]) - 1)],
-                        x[[1]][-c(1, length(x[[1]]))], x[[1]][-c(
-                          seq_len(2),
-                          length(x[[1]])
-                        )],
-                        sep = ""
+              x[[1]][-c(1, length(x[[1]]))], x[[1]][-c(
+                seq_len(2),
+                length(x[[1]])
+              )],
+              sep = ""
             ), x[[1]][-c(1, 2, 3)],
             sep = ""
             )
