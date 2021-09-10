@@ -2,7 +2,8 @@
 % Please edit documentation in R/get_negativePPI.R
 \name{get_negativePPI}
 \alias{get_negativePPI}
-\title{Construct Negative Reference Host-Pathogen Protein-Protein Interactions (HP-PPIs)}
+\title{Construct Negative Reference Host-Pathogen
+Protein-Protein Interactions (HP-PPIs)}
 \usage{
 get_negativePPI(prot1, prot2, TPset)
 }
@@ -11,18 +12,22 @@ get_negativePPI(prot1, prot2, TPset)
 
 \item{prot2}{A character vector containing host proteins.}
 
-\item{TPset}{A character vector containing positive reference interactions.}
+\item{TPset}{A character vector containing positive reference
+interactions.}
 }
 \value{
 A Data.frame containing true negative interactions.
 }
 \description{
 Construct true negative protein-protein interactions
-from the positive interactions. In the context of PPI prediction, a negative interaction
-is a pair of proteins that unlikely to interact. Since there is no experimentally verified
-non-interacting pair, the negative sampling can be used to construct the negative reference set.
-The negative sampling can be constructed from a set of host proteins, a set of pathogen proteins, and
-a list of positive reference interactions between members of host and pathogen proteins (Eid et al., 2016).
+from the positive interactions. In the context of PPI prediction,
+a negative interaction is a pair of proteins that unlikely to interact.
+Since there is no experimentally verified
+non-interacting pair, the negative sampling can be used to construct the
+negative reference set. The negative sampling can be constructed from a
+set of host proteins, a set of pathogen proteins, and a list of positive
+reference interactions between members of host and pathogen proteins
+(Eid et al., 2016).
 }
 \details{
 get_negativePPI
@@ -36,7 +41,8 @@ head(TN_PPI)
 }
 \references{
 Eid, F.-E., ElHefnawi, M., and Heath, L. S. (2016).
-DeNovo: virus-host sequence-based protein–protein interaction prediction. Bioinformatics 32, 1144–1150.
+DeNovo: virus-host sequence-based protein–protein interaction
+prediction. Bioinformatics 32, 1144–1150.
 }
 \seealso{
 See \code{\link{get_positivePPI}} for generating positive

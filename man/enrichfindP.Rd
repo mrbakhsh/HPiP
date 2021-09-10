@@ -2,7 +2,8 @@
 % Please edit documentation in R/enrichfindP.R
 \name{enrichfindP}
 \alias{enrichfindP}
-\title{Functional Enrichment Analysis for Pathogen Interactors in the High-Confidence Network.}
+\title{Functional Enrichment Analysis for Pathogen Interactors in
+the High-Confidence Network.}
 \usage{
 enrichfindP(
   ppi,
@@ -13,39 +14,40 @@ enrichfindP(
 )
 }
 \arguments{
-\item{ppi}{A data.frame containing pathogen proteins in the first column and host
-proteins in the second column.}
+\item{ppi}{A data.frame containing pathogen proteins in the
+first column and host proteins in the second column.}
 
 \item{threshold}{Custom p-value threshold for significance.}
 
-\item{sources}{A vector of data sources to use. See \code{\link[gprofiler2]{gost}} for more details.}
-
-\item{p.corrction.method}{The algorithm used for multiple testing correction;defaults to 'bonferroni'.
+\item{sources}{A vector of data sources to use.
 See \code{\link[gprofiler2]{gost}} for more details.}
 
-\item{org}{organism name;defaults to 'hsapiens'.
+\item{p.corrction.method}{The algorithm used for multiple testing
+correction;defaults to 'bonferroni'.
+See \code{\link[gprofiler2]{gost}} for more details.}
+
+\item{org}{An organism name;defaults to 'hsapiens'.
 See \code{\link[gprofiler2]{gost}} for more details.}
 }
 \value{
 A data.frame with the enrichment analysis results.
 }
 \description{
-This function uses \code{\link[gprofiler2]{gost}} function in \code{gprofiler2} package
-to perfrom functional enrichment analysis for pathogen interactors in the high-confidence network.
+This function uses \code{\link[gprofiler2]{gost}} function
+in \code{gprofiler2} package to perfrom functional enrichment analysis
+for pathogen interactors in the high-confidence network.
 }
 \details{
 enrichfindP
 }
 \examples{
-ppi <- readRDS(
-    system.file("examples/HC_predPPIs.rds", package = "HPiP")
-)
-enrich.df <- enrichfindP(ppi,
-    threshold = 0.05,
-    sources = c("GO", "KEGG"),
-    p.corrction.method = "bonferroni",
-    org = "hsapiens"
-)
+data('predicted_PPIs')
+#perform enrichment
+enrich.df <- enrichfindP(predicted_PPIs,
+threshold = 0.05,
+sources = c("GO", "KEGG"),
+p.corrction.method = "bonferroni",
+org = "hsapiens")
 }
 \seealso{
 See \code{\link{enrichplot}} for plotting enrichment analysis.

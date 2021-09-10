@@ -18,21 +18,20 @@ See \code{\link[caret]{rfe}} for more details}
 Variable Importance Plot.
 }
 \description{
-A graphical display of variable importance of selected features.
+A graphical display of variable importance of selected
+features.
 }
 \details{
 var_imp
 }
 \examples{
-x <- readRDS(system.file("examples/training_data.rds", package = "HPiP"))
-# select 50 rows
-x <- x[1:50, 1:10]
-# feature selection via rfe
-x_output <- FSmethod(x,
-    type = "rfe", resampling.method = "cv",
-    iter = 2, repeats = NULL, metric = "Accuracy", verbose = TRUE
-)
-var_imp(x_output$rfProfile)
+data('example_data')
+x <- na.omit(example_data)
+#perform feature selection
+s <- FSmethod(x, type = 'both',
+cor.cutoff = 0.7, resampling.method = "repeatedcv",
+iter = 5, repeats = 3, metric = "ROC", verbose = TRUE)
+var_imp(s$rf.result$rfProfile, cex.x = 10, cex.y = 10)
 }
 \author{
 Matineh Rahmatbakhsh, \email{matinerb.94@gmail.com}.

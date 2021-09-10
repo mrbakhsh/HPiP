@@ -9,14 +9,15 @@ impute_missing_data(x, method = c("mean", "median", "zero"))
 \arguments{
 \item{x}{A numeric matrix as input.}
 
-\item{method}{Imputation method for missing values (mean, median or zero).}
+\item{method}{Imputation method for missing values
+(mean, median or zero).}
 }
 \value{
 Imputed matrix.
 }
 \description{
-Given an input matrix, impute the missing values via three approaches
-including mean, median or zero.
+Given an input matrix, impute the missing values
+via three approaches including mean, median or zero.
 }
 \details{
 impute_missing_data

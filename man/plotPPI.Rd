@@ -14,7 +14,8 @@ plotPPI(
 )
 }
 \arguments{
-\item{ppi}{A data.frame containing protein-protein interactions with edge score.}
+\item{ppi}{A data.frame containing protein-protein interactions with edge
+score.}
 
 \item{edge.name}{A character string giving an edge attribute name.}
 
@@ -24,13 +25,15 @@ plotPPI(
 
 \item{cex.node}{The size of the node.}
 
-\item{node.label.dist}{The distance of the label from the center of the node.}
+\item{node.label.dist}{The distance of the label from the center of the
+node.}
 }
 \value{
 A PPI plot.
 }
 \description{
-Plot the predicted PPI. This function uses the plot function of the \code{igraph}.
+Plot the predicted PPIs. This function uses the plot
+function of the \code{igraph}.
 }
 \details{
 plotPPI
