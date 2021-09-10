@@ -50,12 +50,12 @@
 
       for (i in seq_len(343)) {
         tmp <- as.vector(outer(classes[[vspace[i, 1]]],
-                               classes[[vspace[i, 2]]], paste,
-                               sep = ""
+          classes[[vspace[i, 2]]], paste,
+          sep = ""
         ))
         CTDict[[i]] <- as.vector(outer(tmp,
-                                       classes[[vspace[i, 3]]], paste,
-                                       sep = ""
+          classes[[vspace[i, 3]]], paste,
+          sep = ""
         ))
       }
       names(CTDict) <- paste(seq_along(CTDict))
@@ -69,8 +69,8 @@
           lapply(., function(x) strsplit(x[[1]], "")) %>%
           lapply(., function(x) {
             paste(paste(x[[1]][-c(length(x[[1]]), length(x[[1]]) - 1)],
-                        x[[1]][-c(1, length(x[[1]]))],
-                        sep = ""
+              x[[1]][-c(1, length(x[[1]]))],
+              sep = ""
             ), x[[1]][-c(1, 2)],
             sep = ""
             )
