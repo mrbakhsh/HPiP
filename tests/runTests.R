@@ -1,0 +1,4 @@
+BiocGenerics:::testPackage('HPiP')
+
+
+
