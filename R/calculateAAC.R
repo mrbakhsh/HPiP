@@ -74,7 +74,7 @@
         lapply(., function(x) strsplit(x[[1]], "")) %>%
         lapply(., function(x) {
           summary(factor(x[[1]], levels = AADict),
-                  maxsum = 20
+            maxsum = 20
           ) / lengths(x)
         })
 
