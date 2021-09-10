@@ -40,18 +40,18 @@
 
         agg.data <-
           aggregate(list(ppi[, 2]),
-                    by = list(ppi[, 1]),
-                    FUN = function(x) {
-                      paste(unique(x),
-                            collapse = ";"
-                      )
-                    }
+            by = list(ppi[, 1]),
+            FUN = function(x) {
+              paste(unique(x),
+                collapse = ";"
+              )
+            }
           )
         colnames(agg.data)[2] <- "interactors"
         agg.data$interactors <-
           vapply(lapply(strsplit(agg.data$interactors, ";"), unique),
-                 paste, character(1L),
-                 collapse = ";"
+            paste, character(1L),
+            collapse = ";"
           )
 
 
@@ -61,13 +61,13 @@
 
         annotCov <- lapply(indcpx, function(x) {
           gprofiler2::gost(x,
-                           significant = TRUE,
-                           exclude_iea = TRUE,
-                           evcodes = TRUE,
-                           user_threshold = threshold,
-                           sources = sources,
-                           correction_method = p.corrction.method,
-                           organism = org
+            significant = TRUE,
+            exclude_iea = TRUE,
+            evcodes = TRUE,
+            user_threshold = threshold,
+            sources = sources,
+            correction_method = p.corrction.method,
+            organism = org
           )
         })
 
