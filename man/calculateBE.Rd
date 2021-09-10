@@ -7,27 +7,28 @@
 calculateBE(x)
 }
 \arguments{
-\item{x}{A data.frame containing gene/protein names and their fasta sequences.}
+\item{x}{A data.frame containing gene/protein names and their
+fasta sequences.}
 }
 \value{
 A length 400 named vector for the data input.
 }
 \description{
-This function transform each residue in a peptide into 20 coding values.
+This function transform each residue in a peptide
+into 20 coding values.
 }
 \details{
 calculateBE
 }
 \examples{
-x <- readRDS(
-    system.file("protseq/UP000464024_FASTAList.rds", package = "HPiP")
-)
-x_df <- calculateBE(x)
+data(UP000464024_df)
+x_df <- calculateBE(UP000464024_df)
 head(x_df, n = 2L)
 }
 \references{
 Al-Barakati, H. J., Saigo, H., and Newman, R. H. (2019).
-RF-GlutarySite: a random forest based predictor for glutarylation sites. \emph{Mol. Omi.} 15, 189–204.
+RF-GlutarySite: a random forest based predictor for glutarylation sites.
+\emph{Mol. Omi.} 15, 189–204.
 }
 \author{
 Matineh Rahmatbakhsh, \email{matinerb.94@gmail.com}

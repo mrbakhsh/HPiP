@@ -7,22 +7,22 @@
 calculateCTriad(x)
 }
 \arguments{
-\item{x}{A data.frame containing gene/protein names and their fasta sequences.}
+\item{x}{A data.frame containing gene/protein names and their
+fasta sequences.}
 }
 \value{
 A length 343  named vector for the data input.
 }
 \description{
-This function calculates Conjoint Triad descriptor for data input.
+This function calculates Conjoint Triad descriptor
+for data input.
 }
 \details{
 calculateCTriad
 }
 \examples{
-x <- readRDS(
-    system.file("protseq/UP000464024_FASTAList.rds", package = "HPiP")
-)
-x_df <- calculateCTriad(x)
+data(UP000464024_df)
+x_df <- calculateCTriad(UP000464024_df)
 head(x_df, n = 2L)
 }
 \references{

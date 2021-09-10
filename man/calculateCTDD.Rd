@@ -7,28 +7,28 @@
 calculateCTDD(x)
 }
 \arguments{
-\item{x}{A data.frame containing gene/protein names and their fasta sequences.}
+\item{x}{A data.frame containing gene/protein names and their fasta
+sequences.}
 }
 \value{
 A length 105 named vector for the data input.
 }
 \description{
-This function calculates Distribution (D) descriptor for data input.
+This function calculates Distribution (D) descriptor
+for data input.
 }
 \details{
 calculateCTDD
 }
 \examples{
-x <- readRDS(
-    system.file("protseq/UP000464024_FASTAList.rds", package = "HPiP")
-)
-x_df <- calculateCTDD(x)
+data(UP000464024_df)
+x_df <- calculateCTDD(UP000464024_df)
 head(x_df, n = 1L)
 }
 \references{
 Dubchak, I., Muchnik, I., Holbrook, S. R., and Kim, S.-H. (1995).
-Prediction of protein folding class using global description of amino acid sequence.
-\emph{Proc. Natl. Acad. Sci.} 92, 8700–8704.
+Prediction of protein folding class using global description of amino
+acid sequence.\emph{Proc. Natl. Acad. Sci.} 92, 8700–8704.
 }
 \seealso{
 See \code{\link{calculateCTDC}} and \code{\link{calculateCTDT}}

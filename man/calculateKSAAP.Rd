@@ -7,33 +7,35 @@
 calculateKSAAP(x, spc = 3)
 }
 \arguments{
-\item{x}{A data.frame containing gene/protein names and their fasta sequences.}
+\item{x}{A data.frame containing gene/protein names and their fasta
+sequences.}
 
-\item{spc}{A number of spaces separating two adjacent residues by a a distance of
-spc, which can be any number up to two less than the length of the peptide; default to 3.}
+\item{spc}{A number of spaces separating two adjacent residues by a
+distance of spc, which can be any number up to two less than
+the length of the peptide; default to 3.}
 }
 \value{
 A length 400 named vector for the data input.
 }
 \description{
-This function calculates k-spaced Amino Acid Pairs (KSAAP) Descriptor
-for data input. This function is adapted from the \code{\link[ftrCOOL]{CkSAApair}} function in
-the ftrCOOL package.
+This function calculates k-spaced Amino Acid Pairs
+(KSAAP) Descriptor for data input.
+This function is adapted from the \code{\link[ftrCOOL]{CkSAApair}}
+ function in the ftrCOOL package.
 }
 \details{
 calculateKSAAP
 }
 \examples{
-x <- readRDS(
-    system.file("protseq/UP000464024_FASTAList.rds", package = "HPiP")
-)
-x_df <- calculateKSAAP(x)
+data(UP000464024_df)
+x_df <- calculateKSAAP(UP000464024_df)
 head(x_df, n = 2L)
 }
 \references{
-Kao, H.-J., Nguyen, V.-N., Huang, K.-Y., Chang, W.-C., and Lee, T.-Y. (2020).
-SuccSite: incorporating amino acid composition and informative k-spaced amino acid pairs
-to identify protein succinylation sites. \emph{Genomics. Proteomics Bioinformatics} 18, 208–219.
+Kao, H.-J., Nguyen, V.-N., Huang, K.-Y., Chang, W.-C., and Lee, T.-Y.
+(2020).SuccSite: incorporating amino acid composition and informative
+k-spaced amino acid pairs to identify protein succinylation sites.
+\emph{Genomics. Proteomics Bioinformatics} 18, 208–219.
 }
 \author{
 Matineh Rahmatbakhsh, \email{matinerb.94@gmail.com}

@@ -2,7 +2,8 @@
 % Please edit documentation in R/getHPI.R
 \name{getHPI}
 \alias{getHPI}
-\title{Generating Host-Pathogen Protein-Protein Interaction (HP-PPI) Descriptors}
+\title{Generating Host-Pathogen Protein-Protein Interaction (HP-PPI)
+Descriptors}
 \usage{
 getHPI(pathogenData, hostData, type = c("combine", "kron.prod"))
 }
@@ -15,11 +16,12 @@ getHPI(pathogenData, hostData, type = c("combine", "kron.prod"))
 \code{"combine"} and \code{"kron.prod"}.}
 }
 \value{
-A matrix containing the Host-Pathogen Protein-Protein Interaction (HP-PPI) descriptors.
+A matrix containing the Host-Pathogen Protein-Protein Interaction
+(HP-PPI) descriptors.
 }
 \description{
-This function calculates Host-Pathogen Protein-Protein Interaction (HP-PPI) descriptors
-via two approaches
+This function calculates Host-Pathogen Protein-Protein
+Interaction (HP-PPI) descriptors via two approaches
 \itemize{
 \item \code{combine} - combine the two descriptor matrix,
 result has \code{(p1 + p2)} columns
