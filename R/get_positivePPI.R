@@ -41,12 +41,12 @@
       url <-
         "http://webservice.thebiogrid.org/interactions/?"
       query <- paste(url,
-                     paste0("accessKey=", access.key),
-                     "interSpeciesExcluded=false",
-                     "selfInteractionsExcluded=true",
-                     "includeHeader=true",
-                     paste0("taxId=", organism.taxID),
-                     sep = "&"
+        paste0("accessKey=", access.key),
+        "interSpeciesExcluded=false",
+        "selfInteractionsExcluded=true",
+        "includeHeader=true",
+        paste0("taxId=", organism.taxID),
+        sep = "&"
       )
 
 
@@ -69,9 +69,9 @@
 
         # parse the biogird results
         biog_result <- httr::content(request,
-                                     type = "text/tab-separated-values",
-                                     encoding = "UTF-8",
-                                     col_types = "cccccccccccccccccccccccc"
+          type = "text/tab-separated-values",
+          encoding = "UTF-8",
+          col_types = "cccccccccccccccccccccccc"
         )
         q <- subset(biog_result, select = c(
           "Official Symbol Interactor A",
@@ -95,8 +95,8 @@
       dataTP <-
         dataTP %>%
         mutate(PPI = paste(`Official Symbol Interactor A`,
-                           `Official Symbol Interactor B`,
-                           sep = "~"
+          `Official Symbol Interactor B`,
+          sep = "~"
         )) %>%
         dplyr::select(6, seq_len(5))
 

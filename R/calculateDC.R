@@ -58,7 +58,7 @@
         lapply(., function(x) strsplit(x[[1]], "")) %>%
         lapply(., function(x) {
           summary(factor(paste(x[[1]][-length(x[[1]])], x[[1]][-1],
-                               sep = ""
+            sep = ""
           ), levels = DClist), maxsum = 400) / (lengths(x) - 1)
         })
 
