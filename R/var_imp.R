@@ -49,8 +49,8 @@
         theme_classic() +
         theme(legend.position = "none") +
         geom_text(aes(label = round(importance, 2)),
-                  vjust = 1.6,
-                  color = "white", size = 4
+          vjust = 1.6,
+          color = "white", size = 4
         ) +
         ggtitle("Variable importance for the selected features") +
         theme(plot.title = element_text(

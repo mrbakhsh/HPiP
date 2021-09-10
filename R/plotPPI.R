@@ -39,15 +39,15 @@
       # igraph
       g <-
         igraph::graph.adjacency(m,
-                                mode = "undirected", weighted = TRUE, diag = TRUE
+          mode = "undirected", weighted = TRUE, diag = TRUE
         )
       graph <-
         igraph::simplify(g)
 
       par(mar = c(0, 0, 0, 0))
       print(plot(graph,
-                 edge.color = edge.color, vertex.color = node.color,
-                 vertex.label.color = "black", vertex.label.dist = node.label.dist,
-                 vertex.size = cex.node
+        edge.color = edge.color, vertex.color = node.color,
+        vertex.label.color = "black", vertex.label.dist = node.label.dist,
+        vertex.size = cex.node
       ))
     }

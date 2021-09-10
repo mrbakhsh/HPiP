@@ -23,11 +23,11 @@
 
       # plotting corr matrix
       plot.cor <- corrplot(cormat,
-                           order = "hclust",
-                           tl.col = "black",
-                           method = method,
-                           tl.cex = cex,
-                           cl.cex = 1.0
+        order = "hclust",
+        tl.col = "black",
+        method = method,
+        tl.cex = cex,
+        cl.cex = 1.0
       ) # Make plot
       return(invisible(plot.cor))
     }

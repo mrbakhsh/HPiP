@@ -170,7 +170,7 @@
       }
 
       if (missing(type)) stop("Must provide at least one feature selection
-                              approach")
+                          approach")
 
       if (!type %in% c("cor", "rfe", "both")) {
         stop("Feature selection type must be one of cor,rfe or both...")
@@ -188,9 +188,9 @@
         result <- .filter.corr(features, class, cor.cutoff)
       } else if (type == "rfe") {
         result <- .rfeFS(features, class,
-                         resampling.method = resampling.method,
-                         iter = iter, repeats = repeats,
-                         metric = metric, verbose = verbose
+          resampling.method = resampling.method,
+          iter = iter, repeats = repeats,
+          metric = metric, verbose = verbose
         )
       } else if (type == "both") {
         cor.result <-
@@ -208,9 +208,9 @@
 
         rf.result <-
           .rfeFS(df.features, df.class,
-                 resampling.method = resampling.method,
-                 iter = iter, repeats = repeats,
-                 metric = metric, verbose = verbose
+            resampling.method = resampling.method,
+            iter = iter, repeats = repeats,
+            metric = metric, verbose = verbose
           )
 
         result <- list()
