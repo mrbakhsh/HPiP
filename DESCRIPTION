@@ -1,7 +1,7 @@
 Package: HPiP
 Type: Package
 Title: Host-Pathogen Interaction Prediction
-Version: 0.99.10
+Version: 0.99.12
 Authors@R: c(
     person("Matineh", "Rahmatbakhsh", ,"matinerb.94@gmail.com",c("aut","trl","cre")),
     person("Mohan", "Babu", ,"mohan.babu@uregina.ca", c("led")))
@@ -32,9 +32,12 @@ Imports:
     igraph,
     graphics,
     stats,
-    purrr
-License: GPL-3
+    purrr,
+    grDevices
+License: MIT + file LICENSE
 Encoding: UTF-8
+URL: https://github.com/mrbakhsh/HPiP
+BugReports: https://github.com/mrbakhsh/HPiP/issues
 VignetteBuilder: knitr
 Suggests:
     knitr,
@@ -42,12 +45,19 @@ Suggests:
     colorspace,
     protr,
     e1071,
+    kernlab,
+    ranger,
+    SummarizedExperiment,
+    Biostrings,
     randomForest,
     gprofiler2,
     gridExtra,
     ggthemes,
     kableExtra,
-    BiocStyle
+    BiocStyle,
+    BiocGenerics,
+    RUnit,
+    tools
 biocViews: 
     Proteomics,
     SystemsBiology,
