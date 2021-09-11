@@ -802,7 +802,7 @@ ex
 ```
 ### BString Object as Data Input
 Alternatively, we can directly read the FASTA sequences into R using 
-[Biostrings](https://bioconductor.org/packages/release/bioc/html/Biostrings.html) 
+[Biostrings](https://bioconductor.org/packages/Biostrings)  
 package [@pages2019biostrings], followed by converting the protein sequences 
 into numerical features.
 ```{r}
@@ -826,7 +826,7 @@ listed in section `3.3.2`***.
 
 
 ### Generate a SummarizedExperiment Objects
-[SummerizedExperiment](https://bioconductor.org/packages/3.13/bioc/html/SummarizedExperiment.html)
+[SummerizedExperiment](https://bioconductor.org/packages/SummarizedExperiment)
 objects can be used to store and merge rectangular matrices of different 
 outputs, as long as they have similar `rownames` or `colnames`. As illustrated 
 in section `3.3.2`, all the computed data.frames have the same `rownames` but 
