@@ -676,7 +676,7 @@ acid property $P$ across the protein sequence, i.e.,
 
 \[
 \bar{P}' = \frac{\sum_{i=1}^L P_i}{L}
-\]                                                                                    
+\]
 
 $d$, $P$, $P_i$ and $P_{i+d}$, $\textrm{nlag}$ are defined as above. The main 
 difference between Moran and Moreau-Broto autocorrelation is that, unlike 
