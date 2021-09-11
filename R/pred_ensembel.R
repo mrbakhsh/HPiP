@@ -176,7 +176,7 @@
         }
 
         # train control
-        suppressMessages(trControl <- trainControl(
+        trControl <- trainControl(
           method = resampling.method,
           number = ncross, # number of resampling iterations
           repeats = repeats,
@@ -184,19 +184,19 @@
           classProbs = TRUE,
           savePredictions = "final",
           allowParallel = TRUE
-        ))
+        )
 
         Ensemble_output <-
           list()
         for (ml in classifier) {
           message(ml)
-          suppressMessages(models <-
+          models <-
             train(class ~ .,
               data = x_train,
               method = ml,
               metric = "Accuracy",
               trControl = trControl
-            ))
+            )
 
           clcol <- which(names(p.data) == "PPI")
           preds <- # predict on new data
