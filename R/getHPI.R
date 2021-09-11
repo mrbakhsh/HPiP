@@ -34,7 +34,8 @@
     #' y <- matrix(c(0, 3, 2, 1), nrow = 2, ncol = 2, byrow = TRUE)
     #' getHPI(x, y, "combine")
     #' getHPI(x, y, "kron.prod")
-    getHPI <- function(pathogenData, hostData, type = c("combine", "kron.prod")) {
+    getHPI <- function(pathogenData, hostData, type = c("combine", "kron.prod"))
+      {
       if (!is.matrix(pathogenData)) pathogenData <- as.matrix(pathogenData)
       if (!is.matrix(hostData)) hostData <- as.matrix(hostData)
 
