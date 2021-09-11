@@ -1,7 +1,7 @@
 Package: HPiP
 Type: Package
 Title: Host-Pathogen Interaction Prediction
-Version: 0.99.13
+Version: 0.99.14
 Authors@R: c(
     person("Matineh", "Rahmatbakhsh", ,"matinerb.94@gmail.com",c("aut","trl","cre")),
     person("Mohan", "Babu", ,"mohan.babu@uregina.ca", c("led")))
