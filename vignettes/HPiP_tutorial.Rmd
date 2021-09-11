@@ -1,5 +1,5 @@
 ---
-title: "HPiP overview"
+title: "Introduction to HPiP"
 author: 
 - name: Matineh Rahmatbakhsh
   affiliation: Babu Lab, University of Regina, Regina, Saskatchwan
@@ -13,7 +13,7 @@ output:
     number_sections: true
     highlight: "textmate"
 vignette: >
-  %\VignetteIndexEntry{HPiP overview}
+  %\VignetteIndexEntry{Introduction to HPiP}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 bibliography: HPiP.bib
