@@ -1,5 +1,5 @@
-# Changes in HPiP 0.99.11 (2021-09-09)
-- add bug 
-- add Url
-- Updated the vignette style.
+# Changes in version HPiP 0.99.15 (2021-09-15)
+- Updated the vignette Figures
+- Changed the pred_ensembel() function
+
 
