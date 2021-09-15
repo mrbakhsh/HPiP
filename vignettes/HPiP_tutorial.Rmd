@@ -115,7 +115,7 @@ performance metrics (e.g., accuracy).
 In the following sections, we explain the main components of the HPiP package, 
 including dataset preparation (i.e., construction of the gold-standard set, 
 FASTA sequence retrieval), feature extraction, data processing steps (i.e., 
-imputation of missing values, feature selection), Ensemble model generation 
+imputation of missing values, feature selection), ensemble model generation 
 and evaluation, prediction of HP-PPIs, network visualization and external 
 validation of the predicted network using functional enrichment analysis. 
 Furthermore, we guide users through each step by applying the HPiP to 
