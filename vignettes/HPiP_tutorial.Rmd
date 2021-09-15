@@ -1137,7 +1137,7 @@ head(pred_interactions)
 Finally, users can subset their list of high-confidence interactions for further
 analysis, using a relaxed classifier confidence ensemble score cutoff of 0.55.
 ```{r}
-pred_interactions <- filter(pred_interactions, ensemble > 0.55)
+pred_interactions <- filter(pred_interactions, ensemble > 0.5)
 dim(pred_interactions)
 ```
 When the `plots` argument set to TRUE, the `pred_ensembel` function generates 
@@ -1211,7 +1211,7 @@ Users can also visualize the result of functional enrichment analysis using the
 following command:
 ```{r, fig.width = 7, fig.height = 8}
 enrich_result <- filter(enrich_result, 
-                       str_detect(id, "^E:"))
+                       str_detect(id, "^E:") & source == "GO:CC")
 enrichplot(enrich_result,
            low = "blue",
            high = "red",
