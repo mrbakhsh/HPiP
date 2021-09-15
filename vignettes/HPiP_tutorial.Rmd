@@ -219,7 +219,7 @@ composition (QC), F1, F2, CTD (composition/transition/distribution),
 conjoint triad, autocorrelation, *k*-spaced amino acid pairs, and binary 
 encoding. 
 
-### Amino acid composition (AAC) Descriptor
+### Amino acid Composition (AAC) Descriptor
 The amino acid composition (AAC) has low complexity and has been widely
 used to predict protein-protein interactions (PPIs) 
 [@beltran2019predicting; @dey2020machine].The AAC explains the fraction of a 
