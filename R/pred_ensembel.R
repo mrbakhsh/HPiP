@@ -199,7 +199,7 @@
           models <-
             train(class ~ .,
                   data = x_train,
-                  method = "ranger",
+                  method = ml,
                   metric = "Accuracy",
                   trControl = trControl
             )
