@@ -1090,7 +1090,7 @@ object.
 
 
 As an example, we will use three base learners , support vector machine 
-(`svmRadial`), neural networks using model averaging (`avNNET`), and random 
+(`svmRadial`), Fitting Generalized Linear Models (`glm`), and random 
 forest (`ranger`), controlled by argument `classifier`, to rank potential 
 interaction. For the sake of time, we use only five-fold cross-validation 
 (`ncross = 5`). In order to perform prediction, we will use `unlabel_data`, 
@@ -1121,10 +1121,10 @@ Now we can predict interactions using `pred_ensembel`:
 set.seed(102)
 ppi <- pred_ensembel(ind_data,
                      gd,
-                     classifier = c("svmRadial", "avNNet", "ranger"),
+                     classifier = c("svmRadial", "glm", "ranger"),
                      resampling.method = "cv",
                      ncross = 5,
-                     verboseIter = FALSE,
+                     verboseIter = TRUE,
                      plots = TRUE,
                      filename = "plots.pdf")
 ```
@@ -1135,9 +1135,9 @@ pred_interactions <- ppi[["predicted_interactions"]]
 head(pred_interactions)
 ```
 Finally, users can subset their list of high-confidence interactions for further
-analysis, using a relaxed classifier confidence ensemble score cutoff of 0.55.
+analysis, using a stringent classifier confidence ensemble score cutoff of 0.7:
 ```{r}
-pred_interactions <- filter(pred_interactions, ensemble > 0.5)
+pred_interactions <- filter(pred_interactions, ensemble >= 0.7)
 dim(pred_interactions)
 ```
 When the `plots` argument set to TRUE, the `pred_ensembel` function generates 
@@ -1170,11 +1170,11 @@ Following PPI prediction, users can visualize the predicted PPI network using
 - The `plotPPI` function, which is based on the *igraph* plotting function 
 [@csardi2013package], provide visualization on interacting host protein 
 partners of pathogen proteins. For instance, to get the PPI network of 
-SARS-CoV2-E-human, we can run the following command:
+SARS-CoV2-ORF8-human, we can run the following command:
       
 ```{r,message=FALSE, results='hide',fig.width = 6, fig.height = 6}
 S_interc <- filter(pred_interactions, 
-                           str_detect(Pathogen_protein, "^E:"))
+                           str_detect(Pathogen_protein, "^ORF8:"))
 #drop the first column
 ppi <- S_interc[,-1]
 
@@ -1211,7 +1211,7 @@ Users can also visualize the result of functional enrichment analysis using the
 following command:
 ```{r, fig.width = 7, fig.height = 8}
 enrich_result <- filter(enrich_result, 
-                       str_detect(id, "^E:") & source == "GO:CC")
+                       str_detect(id, "^ORF8:")  & source == "GO:BP")
 enrichplot(enrich_result,
            low = "blue",
            high = "red",
