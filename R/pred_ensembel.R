@@ -235,13 +235,13 @@
 
         Pred_interactions <-
           do.call(cbind, Pred_interactions)
-        ensemble_score <-
+        ensemble <-
           rowMeans(Pred_interactions)
         datScore <-
-          as.data.frame(cbind(p.data$PPI, ensemble_score))
+          as.data.frame(cbind(p.data$PPI, ensemble))
         colnames(datScore)[1] <- "PPI"
-        datScore$ensemble_score <- 
-          as.numeric(as.character(datScore$ensemble_score))
+        datScore$ensemble <- 
+          as.numeric(as.character(datScore$ensemble))
         datScore <-
           separate(datScore, PPI, c(
             "Pathogen_protein",
