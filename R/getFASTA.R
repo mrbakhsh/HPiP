@@ -47,6 +47,12 @@
       }
 
       names(fastalist.query) <- names
+      na.omit.list <-
+        function(y)
+        { return(y[!sapply(y, function(x) all(is.na(x)))]) }
+
+      fastalist.query <-
+        na.omit.list(fastalist.query)
 
       # check if protein sequence's amino acid types re in the 20 default types
       s1.check <-
