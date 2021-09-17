@@ -6,8 +6,8 @@
 Interactions (HP-PPIs) from the BioGRID Database}
 \usage{
 get_positivePPI(
-  organism.taxID = 2697049,
-  access.key = "81bb3b5a6bd9a8084a7be71f0963ab1e",
+  organism.taxID,
+  access.key,
   filename = "PositiveInt.RData",
   path = "PositiveInt"
 )
@@ -40,11 +40,13 @@ protein-protein interactions directly from BioGRID database.
 get_positivePPI
 }
 \examples{
+\donttest{
 local = tempdir()
-positive_reflists <- get_positivePPI(organism.taxID = 2697049,
-access.key = '81bb3b5a6bd9a8084a7be71f0963ab1e',
+try(get_positivePPI(organism.taxID = 2697049,
+access.key = 'XXXX',
 filename = "PositiveInt.RData",
-path = local)
+path = local))
+}
 }
 \seealso{
 See \code{\link{get_negativePPI}} for generating negative
