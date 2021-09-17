@@ -24,11 +24,14 @@
     #' protein-protein interactions directly from BioGRID database.
     #' @export
     #' @examples
+    #' \donttest{
     #' local = tempdir()
-    #' positive_reflists <- get_positivePPI(organism.taxID = 2697049,
-    #' access.key = '81bb3b5a6bd9a8084a7be71f0963ab1e',
+    #' try(get_positivePPI(organism.taxID = 2697049,
+    #' access.key = 'XXXX',
     #' filename = "PositiveInt.RData",
-    #' path = local)
+    #' path = local))
+    #' }
+
 
     get_positivePPI <- function(organism.taxID = 2697049,
                                 access.key = "81bb3b5a6bd9a8084a7be71f0963ab1e",
