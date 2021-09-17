@@ -33,8 +33,8 @@
     #' }
 
 
-    get_positivePPI <- function(organism.taxID = 2697049,
-                                access.key = "81bb3b5a6bd9a8084a7be71f0963ab1e",
+    get_positivePPI <- function(organism.taxID,
+                                access.key,
                                 filename = "PositiveInt.RData",
                                 path = "PositiveInt") {
       `Official Symbol Interactor A` <- NULL
