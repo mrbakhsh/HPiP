@@ -178,7 +178,7 @@ TP <- get_positivePPI(organism.taxID = 2697049,
                             path = local)
 ```
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 TP <- read_csv(
           system.file("extdata/TP_set.csv", package = "HPiP"),
         )
