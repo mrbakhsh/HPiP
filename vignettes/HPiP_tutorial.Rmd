@@ -27,6 +27,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r, echo=FALSE,message=FALSE, warning=FALSE}
 suppressPackageStartupMessages({
   library("kableExtra")
+  library("readr")
   library("dplyr")
   library("Biostrings")
   library("SummarizedExperiment")
@@ -178,18 +179,17 @@ TP <- get_positivePPI(organism.taxID = 2697049,
 ```
 
 ```{r, echo=FALSE}
-TP <- read.csv(
+TP <- read_csv(
           system.file("extdata/TP_set.csv", package = "HPiP"),
-          header = TRUE
         )
 ```
 Subsequently, we can construct negative set via negative sampling using the 
 following command:
 ```{r}
 #pathogen proteins
-prot1 <- unique(TP$Official.Symbol.Interactor.A)
+prot1 <- unique(TP$`Official Symbol Interactor A`)
 #host proteins
-prot2 <- unique(TP$Official.Symbol.Interactor.B)
+prot2 <- unique(TP$`Official Symbol Interactor B`)
 #true positive PPIs 
 TPset <- TP$PPI
 TN <- get_negativePPI(prot1 , prot2, TPset)
