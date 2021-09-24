@@ -1,5 +1,3 @@
-# R package: HPiP
-
 <!-- badges: start -->
 <!-- badger::badge_codecov() -->
 <!-- copied from MungeSumstats README.Rmd -->
@@ -12,6 +10,8 @@
 [![License: MIT (&gt;=
 3)](https://img.shields.io/badge/license-MIT-blue.svg)](https://cran.r-project.org/web/licenses/MIT)
 <!-- badges: end -->
+
+# host-pathogen interaction prediction (HPiP)
 
 HPiP (host-pathogen interaction prediction) is an R package for automated prediction of host-pathogen protein-protein interactions (HP-PPIs) using structural and physicochemical descriptors computed from amino acid-composition of host and pathogen proteins. Briefly, HPiP extracts gold-standard of experimentally verified HP-PPIs (i.e., positive interactions) from public repository, construct negative interactions via negative sampling, retrieve and convert protein sequences to numerical representation via various descriptors, applies multivariate feature selection based on correlation and recursive feature elimination (RFE)-embedded, and finally applies ensemble averaging to predict interactions. Taken together, we hope that the HPiP package not only contributes a useful predictor to accelerate the exploration of host-pathogen PPIs, but also provides some meaningful insights into host-pathogen relationships.
 ## Installation
