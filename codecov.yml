@@ -1,2 +1,15 @@
-codecov:
-  token: 2edb543f-858c-4a98-8ff7-f4f4200e1343
+language: r
+
+sudo: required
+
+env: _R_CHECK_CRAN_INCOMING_=FALSE
+
+r_packages:
+  - covr
+  - devtools
+
+r_github_packages:
+  - codecov/example-r
+
+after_success:
+  - Rscript -e 'library(covr);codecov()'
