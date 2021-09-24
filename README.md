@@ -6,7 +6,7 @@
 <!-- badger::badge_lifecycle("stable", "green") -->
 <!-- badger::badge_last_commit()  -->
 <!-- badger::badge_license() -->
-[![](https://codecov.io/gh/mrbakhsh/HPiP/branch/master/graph/badge.svg)](https://code.io/gh/mrbakhsh/HPiP)
+[![codecov](https://codecov.io/gh/mrbakhsh/HPiP/branch/master/graph/badge.svg?token=QrxOd1YK43)](https://codecov.io/gh/mrbakhsh/HPiP)
 [![](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![](https://img.shields.io/github/last-commit/mrbakhsh/HPiP.svg)](https://github.com/mrbakhsh/HPiP/commits/master)
 [![License: MIT (&gt;=
