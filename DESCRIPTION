@@ -33,14 +33,14 @@ Imports:
     graphics,
     stats,
     purrr,
-    grDevices
+    grDevices,
+	knitr (>= 1.16)
 License: MIT + file LICENSE
 Encoding: UTF-8
 URL: https://github.com/mrbakhsh/HPiP
 BugReports: https://github.com/mrbakhsh/HPiP/issues
 VignetteBuilder: knitr
 Suggests:
-    knitr,
     rmarkdown,
     colorspace,
     protr,
