@@ -26,6 +26,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r, echo=FALSE,message=FALSE, warning=FALSE}
 suppressPackageStartupMessages({
+  library("knitr")
   library("kableExtra")
   library("readr")
   library("dplyr")
