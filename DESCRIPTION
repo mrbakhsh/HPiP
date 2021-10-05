@@ -52,12 +52,11 @@ Suggests:
     gprofiler2,
     gridExtra,
     ggthemes,
-    kableExtra,
     BiocStyle,
     BiocGenerics,
     RUnit,
     tools,
-    knitr (>= 1.16)
+    knitr
 biocViews: 
     Proteomics,
     SystemsBiology,
