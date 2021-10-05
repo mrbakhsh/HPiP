@@ -20,14 +20,20 @@ bibliography: HPiP.bib
 csl: bioinformatics.csl  
 ---
 
+
+```{r echo=FALSE,message=FALSE, warning=FALSE}
+library("knitr")
+```
+
+
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
+
 ```{r, echo=FALSE,message=FALSE, warning=FALSE}
 suppressPackageStartupMessages({
-  library("knitr")
-  library("kableExtra")
   library("readr")
   library("dplyr")
   library("Biostrings")
@@ -36,6 +42,54 @@ suppressPackageStartupMessages({
 })
 ```
 
+
+\pagebreak
+
+
+# Introduction
+Infectious disease imposes a significant threat to human health and pose
+substantial healthcare costs.  Infectious diseases result from the cross-talks 
+between hosts and pathogens, which are mainly mediated by protein-protein 
+interactions between hosts and pathogen proteins (HP-PPIs). The potential 
+(HP-PPIs) represents the crucial elements of the infection mechanism as they 
+decide the outcome, leading to either pathogen clearance or spread of the 
+pathogen in the host due to evading the host immune response 
+[@rahmatbakhsh2021bioinformatic]. Therefore, the study of the host-pathogen 
+interactome is increasingly vital to uncover the molecular attributes of 
+infectious diseases and potentially discover novel pharmacological targets or 
+laying a strong foundation for repurposing of existing drugs.
+
+In the past decades, several high throughput experimental approaches have been
+developed to chart HP-PPIs on a large scale (e.g., yeast two-hybrid (Y2H) 
+system [@ito2001comprehensive] or affinity purification (AP) coupled to mass
+spectrometry (MS) [@puig2001tandem]). However, such high-throughput experimental
+screens are typically laborious, time-consuming, and challenging to capture the
+complete interactome, resulting in limited number of experimentally validated 
+interactome in a database of HP-PPIs [@hart2006complete]. In-silico prediction 
+of HP-PPIs can complement wet-lab experiments by suggesting candidate 
+interaction partners for all the host proteins and excluding partners with low 
+interacting probability scores to reduce the range of possible PPI candidates 
+that need to be validated via wet-lab experiments. Specialized computational 
+approaches to predict HP-PPIs are therefore of significant importance. 
+While many computational tools have been developed to predict intra-species 
+PPIs (i.e., PPIs within the same species)
+[@wu2006prediction; @shen2007predicting; @nourani2015computational],
+the availability of computational tools to predict inter-species PPIs 
+such as HP-PPIs are rare.
+
+For this purpose, we describe HPiP (host-pathogen interaction prediction), 
+an R package for automated prediction of HP-PPIs using structural and 
+physicochemical descriptors computed from amino acid-composition of host and 
+pathogen proteins. Briefly, HPiP extracts gold-standard of experimentally 
+verified HP-PPIs (i.e., positive interactions) from public repository, 
+construct negative interactions via negative sampling, retrieve and convert 
+protein sequences to numerical representation via various descriptors, applies 
+multivariate feature selection based on correlation and recursive feature 
+elimination (RFE)-embedded, and finally applies ensemble averaging to predict 
+interactions. Taken together, we hope that the HPiP package not only 
+contributes a useful predictor to accelerate the exploration of host-pathogen 
+PPIs, but also provides some meaningful insights into host-pathogen 
+relationships.  
 
 \pagebreak
 
@@ -457,12 +511,8 @@ which will be explained in the following sections.
 ```{r, echo=FALSE}
 df1 <- HPiP:::df1
 df1[is.na(df1)] <- ""
-df1 %>%
-  kbl(caption = "Amino acid attributes and the division of amino acid into 
-      three-group") %>%
-  kable_classic(full_width = FALSE, html_font = "Cambria")
+knitr::kable(df1, align = "lccrr", caption = "Amino acid attributes and the division of amino acid into three-group.", longtable = TRUE)
 ```
-
 ### Composition (C) Descriptor
 The composition represents the number of amino acids of a particular property 
 (e.g., hydrophobicity)  for each encoded class divided by the protein sequence 
@@ -766,12 +816,9 @@ of using KSAAP features with various values of k for protein sequence
 ```{r, echo=FALSE}
 df2 <- HPiP:::df2
 df2[is.na(df2)] <- ""
-df2 %>%
-  kbl(caption = "Composition of k-spaced amino acid pairs.Given 400 (20 × 20) 
-      amino acid pairs and four values for k (k = 1–4), there are 1600 
-      attributes generated for the KSAAP feature.",col.names = NULL) %>%
-  kable_classic(full_width = FALSE, html_font = "Cambria",position = "left")%>%
-  kable_styling(fixed_thead = TRUE)
+knitr::kable(df2, caption = "Composition of k-spaced amino acid pairs. Given 400 (20 × 20) amino acid pairs and four values for k (k=1–4), there are 1600 attributes generated for the KSAAP feature.", 
+col.names = c("","","","","","","",""),row.names = NA,
+             longtable = TRUE, align = "lccrr")
 ```
 The KSAAP descriptor from the  protein sequences can be calculated with the
 following command:
@@ -799,13 +846,6 @@ BE_df <- calculateBE(fasta_df)
 #only print out the first 30 elements for the first row 
 BE_df[1, c(2:31)] 
 
-```
-
-```{r, echo= FALSE}
-ex <- BE_df[1, c(2:31)] 
-#convert df to character vector 
-ex <- structure(as.numeric(ex), names = colnames(ex)) 
-ex
 ```
 ### BString Object as Data Input
 Alternatively, we can directly read the FASTA sequences into R using 
@@ -896,10 +936,8 @@ viral_se <- cbind(ctdc_se,ctdd_se,ctdt_se)
 ```{r, echo=FALSE}
 df3 <- HPiP:::df3
 df3[is.na(df3)] <- ""
-df3 %>%
-  kbl(caption = "List of commonly used descriptors in HPiP") %>%
-  kable_classic(full_width = FALSE, html_font = "Cambria")
-
+knitr::kable(df3, caption = "List of commonly used descriptors in HPiP.",
+             align = "lccrr")
 ```
 - ***Note that we can calculate protein sequence descriptors for the host 
 proteins using the functions described above (i.e., section `3.2.1-3.2.14`)***.
@@ -1192,7 +1230,7 @@ plotPPI(ppi, edge.name = "ensemble",
             node.label.dist= 2)
 ```
 
-  - The `FreqInteractors` function, shows the degree distribution of pathogen 
+- The `FreqInteractors` function, shows the degree distribution of pathogen 
   proteins in the HP-PPI network:
       
 ```{r, fig.width = 10, fig.height = 5}
@@ -1235,3 +1273,4 @@ sessionInfo()
 # References
   
   
+
