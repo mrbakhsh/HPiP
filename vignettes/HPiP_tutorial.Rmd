@@ -232,6 +232,7 @@ TP <- get_positivePPI(organism.taxID = 2697049,
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 TP <- read_csv(
           system.file("extdata/TP_set.csv", package = "HPiP"),
+          show_col_types = FALSE
         )
 ```
 Subsequently, we can construct negative set via negative sampling using the 
