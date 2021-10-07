@@ -294,10 +294,10 @@ The ACC descriptor from the  protein sequences can be loaded
 with the following command:
 
 ```{r, results='hide'}
-# Convert the list of seqeunces obtained in the previous section to data.frame 
-fasta_df <- do.call(rbind, fasta_list) %>%
-  as.data.frame(.) %>%
-  tibble::rownames_to_column("UniprotKB")
+# Convert the list of sequences obtained in the previous section to data.frame 
+fasta_df <- do.call(rbind, fasta_list) 
+fasta_df <- data.frame(names = row.names(fasta_df), fasta_df)
+
 #calculate AAC
 acc_df <- calculateAAC(fasta_df)
 #only print out the result for the first row 
@@ -308,7 +308,7 @@ acc_df[1,-1]
 ```{r, echo= FALSE}
 ex <- acc_df[1,-1] 
 ex <- structure(as.numeric(ex), names = colnames(ex)) 
-ex
+knitr::kable(ex)
 ```
 
 
