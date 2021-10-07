@@ -297,19 +297,18 @@ with the following command:
 # Convert the list of sequences obtained in the previous section to data.frame 
 fasta_df <- do.call(rbind, fasta_list) 
 fasta_df <- data.frame(UniprotID = row.names(fasta_df), 
-                       sequence = fasta_df)
+                       sequence = as.character(fasta_df))
 
 #calculate AAC
 acc_df <- calculateAAC(fasta_df)
 #only print out the result for the first row 
 acc_df[1,-1] 
-
 ```
 
 ```{r, echo= FALSE}
 ex <- acc_df[1,-1] 
 ex <- structure(as.numeric(ex), names = colnames(ex)) 
-knitr::kable(ex)
+ex
 ```
 
 
