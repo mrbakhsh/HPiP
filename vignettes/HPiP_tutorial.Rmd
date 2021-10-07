@@ -296,7 +296,8 @@ with the following command:
 ```{r, results='hide'}
 # Convert the list of sequences obtained in the previous section to data.frame 
 fasta_df <- do.call(rbind, fasta_list) 
-fasta_df <- data.frame(names = row.names(fasta_df), fasta_df)
+fasta_df <- data.frame(UniprotID = row.names(fasta_df), 
+                       sequence = fasta_df)
 
 #calculate AAC
 acc_df <- calculateAAC(fasta_df)
