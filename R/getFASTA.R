@@ -11,6 +11,7 @@
     #' @author Matineh Rahmatbakhsh, \email{matinerb.94@gmail.com}
     #' @importFrom stats na.omit
     #' @importFrom utils read.delim
+    #' @importFrom protr readFASTA
     #' @description This function retrieves protein sequences in FASTA format
     #' directly from the UniProt database via UniProt protein IDs. This function
     #' also checks if the amino-acid composition of protein sequences
