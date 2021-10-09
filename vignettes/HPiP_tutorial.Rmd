@@ -88,9 +88,6 @@ contributes a useful predictor to accelerate the exploration of host-pathogen
 PPIs, but also provides some meaningful insights into host-pathogen 
 relationships.  
 
-\pagebreak
-
-
 # Overview of HPiP
 Briefly, HPiP downloads the gold-standard data sets of experimentally verified 
 host-pathogen PPIs from the BioGRID database [@stark2006biogrid]. 
