@@ -463,7 +463,7 @@ df1[is.na(df1)] <- ""
 knitr::kable(df1, align = "lccrr", caption = "Amino acid attributes and the division of amino acid into three-group.", longtable = TRUE)
 ```
 
-### Composition (C) Descriptor
+#### Composition (C) Descriptor
 The composition represents the number of amino acids of a particular property 
 (e.g., hydrophobicity)  for each encoded class divided by the protein sequence 
 length [@you2014prediction]. In the above example using the hydrophobicity 
@@ -494,7 +494,7 @@ ex
 ```
 
 
-### Transition (T) Descriptor
+#### Transition (T) Descriptor
 Transition (T) characterizes the percent frequency from a type of amino acids 
 to another type (Wang et al., 2017). For instance, a transition from class `1` 
 to `2`  or `2` to `1` is the percent frequency with which class `1` is followed 
@@ -523,7 +523,7 @@ ex <- CTDT_df[1, -1]
 ex <- structure(as.numeric(ex), names = colnames(ex)) 
 ex
 ```
-### Distribution (D) Descriptor
+#### Distribution (D) Descriptor
 The distribution measures the chain length within which the first, 25%, 50%, 
 75%, and 100% of the amino acids of a particular property (e.g., hydrophobicity)
 for a certain encoded class are located, respectively [@dubchak1995prediction]. 
