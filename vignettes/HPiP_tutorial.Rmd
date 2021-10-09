@@ -91,51 +91,6 @@ relationships.
 \pagebreak
 
 
-# Introduction
-Infectious disease imposes a significant threat to human health and pose
-substantial healthcare costs.  Infectious diseases result from the cross-talks 
-between hosts and pathogens, which are mainly mediated by protein-protein 
-interactions between hosts and pathogen proteins (HP-PPIs). The potential 
-(HP-PPIs) represents the crucial elements of the infection mechanism as they 
-decide the outcome, leading to either pathogen clearance or spread of the 
-pathogen in the host due to evading the host immune response 
-[@rahmatbakhsh2021bioinformatic]. Therefore, the study of the host-pathogen 
-interactome is increasingly vital to uncover the molecular attributes of 
-infectious diseases and potentially discover novel pharmacological targets or 
-laying a strong foundation for repurposing of existing drugs.
-
-In the past decades, several high throughput experimental approaches have been
-developed to chart HP-PPIs on a large scale (e.g., yeast two-hybrid (Y2H) 
-system [@ito2001comprehensive] or affinity purification (AP) coupled to mass
-spectrometry (MS) [@puig2001tandem]). However, such high-throughput experimental
-screens are typically laborious, time-consuming, and challenging to capture the
-complete interactome, resulting in limited number of experimentally validated 
-interactome in a database of HP-PPIs [@hart2006complete]. In-silico prediction 
-of HP-PPIs can complement wet-lab experiments by suggesting candidate 
-interaction partners for all the host proteins and excluding partners with low 
-interacting probability scores to reduce the range of possible PPI candidates 
-that need to be validated via wet-lab experiments. Specialized computational 
-approaches to predict HP-PPIs are therefore of significant importance. 
-While many computational tools have been developed to predict intra-species 
-PPIs (i.e., PPIs within the same species)
-[@wu2006prediction; @shen2007predicting; @nourani2015computational],
-the availability of computational tools to predict inter-species PPIs 
-such as HP-PPIs are rare.
-
-For this purpose, we describe HPiP (host-pathogen interaction prediction), 
-an R package for automated prediction of HP-PPIs using structural and 
-physicochemical descriptors computed from amino acid-composition of host and 
-pathogen proteins. Briefly, HPiP extracts gold-standard of experimentally 
-verified HP-PPIs (i.e., positive interactions) from public repository, 
-construct negative interactions via negative sampling, retrieve and convert 
-protein sequences to numerical representation via various descriptors, applies 
-multivariate feature selection based on correlation and recursive feature 
-elimination (RFE)-embedded, and finally applies ensemble averaging to predict 
-interactions. Taken together, we hope that the HPiP package not only 
-contributes a useful predictor to accelerate the exploration of host-pathogen 
-PPIs, but also provides some meaningful insights into host-pathogen 
-relationships.  
-
 # Overview of HPiP
 Briefly, HPiP downloads the gold-standard data sets of experimentally verified 
 host-pathogen PPIs from the BioGRID database [@stark2006biogrid]. 
