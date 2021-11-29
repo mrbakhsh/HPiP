@@ -27,6 +27,7 @@
     #' @importFrom igraph cluster_label_prop
     #' @importFrom igraph simplify
     #' @importFrom igraph membership
+    #' @importFrom igraph E
     #' @importFrom MCL mcl
     #' @description This function contains five module detection algorithms
     #' including fast-greedy algorithm
