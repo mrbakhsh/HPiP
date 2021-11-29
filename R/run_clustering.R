@@ -60,7 +60,7 @@
         #igraph
         g <-
             graph.adjacency(m,
-                            mode = "undirected", weighted = TRUE, diag = T)
+                            mode = "undirected", weighted = TRUE, diag = TRUE)
         graph<-
             simplify(g)
 
@@ -92,7 +92,7 @@
         } else if(method == "MCL") {
 
         mcl.clust <-
-            mcl(m, addLoops = T,
+            mcl(m, addLoops = TRUE,
                 expansion = expan,
                 inflation = infla,
                 allow1 = FALSE,
