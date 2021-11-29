@@ -453,7 +453,7 @@ Then, each amino acid in the protein sequence is encoded by one of the indices
 1,2,3 depending on its grouping.  The corresponding divisions for each group are
 shown in **Table 1**. According to Hydrophobicity grouping mentioned in
 **Table 1**, the protein sequence `CLVIMFWGASTPHYRKEDQN` is replaced by 
-`1111112222222333333`. Next, for a given attribute, three types of descriptors, 
+`11111112222222333333`. Next, for a given attribute, three types of descriptors, 
 composition (C), transition (T), and distribution (D) can be calculated, 
 which will be explained in the following sections.
 
@@ -1166,7 +1166,7 @@ of ensemble classifier vs selected individual classifiers.
 class="img-responsive" align="center">
   <p align="right"> **Figure 6: Point plot.**
 
-## Results of the Prediction
+## Nework Visualization
 Following PPI prediction, users can visualize the predicted PPI network using 
 `plotPPI` and `FreqInteractors` functions.
     
@@ -1201,9 +1201,12 @@ FreqInteractors(ppi,cex.size = 12)
 ## GO Enrichment Analysis
 To identify significantly enriched annotation terms in predicted interacting 
 host protein partners of each pathogen protein, we can use the `enrichfindP` 
-function based on the *g:Profiler* tool [@kolberg2020gprofiler2]. The following
-command performs functional enrichment analysis:
+function based on the *g:Profiler* tool [@kolberg2020gprofiler2]. Additionally,
+we can use the `erichfind_hp` function to analyze functional characteristics of 
+all predicted human proteins in the predicted network.
 
+For instance, the following command can be used to performs functional 
+enrichment analysis of host protein partners of each pathogen protein:
 ```{r, warning=FALSE, message=FALSE, results='hide'}
 enrich_result <- 
   enrichfindP(ppi,threshold = 0.05,
@@ -1221,6 +1224,32 @@ enrichplot(enrich_result,
            high = "red",
            cex.size = 12)
 ```
+
+## Complex Detection
+for this analysis, we utilizes the predicted HP-PPIS network generated in 
+section `3.5` as input data for complex prediction. For the community detection 
+analysis, `run_clustering` function provided in the HPiP package  includes the
+five most popular complex detection algorithms in including fast-greedy, 
+walktrap, label propagation, multi-level community, and markov clustering. For
+example, to detect complexes using fast-greedy algorithm, we can run the 
+following command:
+
+```{r,message=FALSE}
+ppi <- pred_interactions[,-1]
+set.seed(103)
+predcpx <- run_clustering(ppi, method = "FC")
+```
+Additionally, we can analyze the functional characteristics of 
+these predicted modules via `enrichfind_cpx` function.   
+
+```{r,message=FALSE}
+enrichcpx <- enrichfind_cpx(predcpx,
+             threshold = 0.05,
+             sources = "GO",
+             p.corrction.method = "bonferroni",
+             org = "hsapiens")
+```
+
 
     
 # Session info
