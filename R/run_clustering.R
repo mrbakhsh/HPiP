@@ -35,6 +35,7 @@
     #' (\code{ML}), label propagation algorithm (\code{clp}), and markov
     #' clustering (\code{MCL}).
     #' @export
+
     run_clustering <- function(ppi, method = c("FC",
                                                "RW",
                                                "ML",
