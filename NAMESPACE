@@ -25,7 +25,7 @@ export(getFASTA)
 export(getHPI)
 export(get_negativePPI)
 export(get_positivePPI)
-export(impute_missing_data)
+export(impute_missing_data)a
 export(plotPPI)
 export(pred_ensembel)
 export(run_clustering)
