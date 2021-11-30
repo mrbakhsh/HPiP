@@ -1,7 +1,7 @@
 Package: HPiP
 Type: Package
 Title: Host-Pathogen Interaction Prediction
-Version: 1.1.0
+Version: 1.1.1
 Authors@R: c(
     person("Matineh", "Rahmatbakhsh", ,"matinerb.94@gmail.com",c("aut","trl","cre")),
     person("Mohan", "Babu", ,"mohan.babu@uregina.ca", c("led")))
@@ -34,7 +34,8 @@ Imports:
     stats,
     purrr,
     grDevices,
-	protr
+	protr,
+	MCL
 License: MIT + file LICENSE
 Encoding: UTF-8
 URL: https://github.com/mrbakhsh/HPiP
