@@ -1225,7 +1225,7 @@ enrichplot(enrich_result,
            cex.size = 12)
 ```
 
-## Complex Detection
+## Complex Prediction
 for this analysis, we utilizes the predicted HP-PPIS network generated in 
 section `3.5` as input data for complex prediction. For the community detection 
 analysis, `run_clustering` function provided in the HPiP package  includes the
