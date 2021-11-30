@@ -1,4 +1,4 @@
-# Changes in version HPiP 1.1.1 (2021-11-29)
+# Changes in version HPiP 1.99.1 (2021-11-29)
 - Updated the vignette examples
 - Added clustering detection algorithms
 
