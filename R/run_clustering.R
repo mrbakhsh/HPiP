@@ -67,43 +67,43 @@
         if(method == "FC") {
             fc <-
                 fastgreedy.community(graph,merges=TRUE,modularity=TRUE)
-            membership<-
-                membership(fc)
+            mem<-
+                igraph::membership(fc)
         }else if(method == "RW") {
-        rw <-
-            cluster_walktrap(graph,weights = E(graph)$weight,
-                             merges=TRUE,modularity=TRUE)
-        membership<-
-            membership(rw)
+            rw <-
+                cluster_walktrap(graph,weights = E(graph)$weight,
+                                 merges=TRUE,modularity=TRUE)
+            mem<-
+                igraph::membership(rw)
 
 
         }else if(method == "ML") {
-        ml <-
-            cluster_louvain(graph,weights = E(graph)$weight)
-        membership<-
-            membership(ml)
+            ml <-
+                cluster_louvain(graph,weights = E(graph)$weight)
+            mem<-
+                igraph::membership(ml)
 
         }else if(method == "clp") {
-        clp <-
-            cluster_label_prop(graph, weights = E(graph)$weight)
-        membership<-
-            membership(clp)
+            clp <-
+                cluster_label_prop(graph, weights = E(graph)$weight)
+            mem<-
+                igraph::membership(clp)
 
         } else if(method == "MCL") {
 
-        mcl.clust <-
-            mcl(m, addLoops = TRUE,
-                expansion = expan,
-                inflation = infla,
-                allow1 = FALSE,
-                max.iter = iter, ESM = FALSE)
-        membership<-
-            mcl.clust$Cluster
-        names(membership) <- colnames(m)
+            mcl.clust <-
+                mcl(m, addLoops = TRUE,
+                    expansion = expan,
+                    inflation = infla,
+                    allow1 = FALSE,
+                    max.iter = iter, ESM = FALSE)
+            mem<-
+                mcl.clust$Cluster
+            names(mem) <- colnames(m)
 
-    }
+        }
         dfout <-
-            cbind(names(membership),membership)
+            cbind(names(mem),mem)
         colnames(dfout)[1] <-
             "member"
         return(dfout)

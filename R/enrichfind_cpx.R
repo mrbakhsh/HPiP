@@ -1,6 +1,6 @@
     #' enrichfind_cpx
     #' @title Functional Enrichment Analysis for Predicted Modules
-    #' @param predcpx Predicted modules resutled from
+    #' @param predcpx Predicted modules resulted from
     #' \code{\link[HPiP]{run_clustering}}.
     #' @param threshold Custom p-value threshold for significance.
     #' @param sources A vector of data sources to use.
@@ -13,7 +13,7 @@
     #' @return A data.frame with the enrichment analysis results.
     #' @author Matineh Rahmatbakhsh, \email{matinerb.94@gmail.com}
     #' @description This function uses \code{\link[gprofiler2]{gost}} function
-    #' in \code{gprofiler2} package to perfrom functional enrichment analysis
+    #' in \code{gprofiler2} package to perform functional enrichment analysis
     #' for predicted modules.
     #' @export
 
