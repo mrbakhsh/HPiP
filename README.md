@@ -27,10 +27,13 @@ if(!requireNamespace("devtools", quietly = TRUE)) {
 devtools::install_github("mrbakhsh/HPiP")
 ```
 
-## Adapting the pipeline for different datasets:
+## Adapting the pipeline for different datasets
 
 The utility and performance of the proposed package were demonstrated using three different case studie and data analysis codes are availble from https://github.com/BabuLab-UofR/HPiP_pub, where quidlines and sample datasets are also offered for testing purposes.
 
+## Contribute
+
+Check the github page for [source code](https://github.com/BabuLab-UofR/HPiP)
 
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for more details.
