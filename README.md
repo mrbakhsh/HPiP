@@ -29,7 +29,7 @@ devtools::install_github("mrbakhsh/HPiP")
 
 ## Adapting the pipeline for different datasets
 
-The utility and performance of the proposed package were demonstrated using three different case studie and data analysis codes are availble from https://github.com/BabuLab-UofR/HPiP_pub, where quidlines and sample datasets are also offered for testing purposes.
+The utility and performance of the proposed package were demonstrated using three different case studies, and data analysis codes are available from https://github.com/BabuLab-UofR/HPiP_pub, where guidelines and sample datasets are also offered for testing purposes.
 
 ## Contribute
 
