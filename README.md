@@ -40,4 +40,4 @@ This project is licensed under the MIT License - see the LICENSE.md file for mor
 
 If using these scripts in your data analyses pipelines, please cite our paper:
 
-Rahmatbakhsh, M., et al. (2022) HPiP: an R/Bioconductor package for predicting host-pathogen protein-protein  interactions from protein sequences using an ensemble machine learning. Manuscript submitted for publication
+Rahmatbakhsh,M. et al. (2022) HPiP: an R/Bioconductor package for predicting host–pathogen protein–protein interactions from protein sequences using ensemble machine learning approach. Bioinforma. Adv., 2, vbac038.
