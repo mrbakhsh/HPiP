@@ -27,10 +27,13 @@ if(!requireNamespace("devtools", quietly = TRUE)) {
 devtools::install_github("mrbakhsh/HPiP")
 ```
 
-## Adapting the pipeline for different datasets:
+## Adapting the pipeline for different datasets
 
-The utility and performance of the proposed package were demonstrated using three different case studie and data analysis codes are availble from https://github.com/BabuLab-UofR/HPiP_pub, where quidlines and sample datasets are also offered for testing purposes.
+The utility and performance of the proposed package were demonstrated using three different case studies, and data analysis codes are available from https://github.com/BabuLab-UofR/HPiP_pub, where guidelines and sample datasets are also offered for testing purposes.
 
+## Contribute
+
+Check the github page for [source code](https://github.com/BabuLab-UofR/HPiP)
 
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for more details.
@@ -38,5 +41,3 @@ This project is licensed under the MIT License - see the LICENSE.md file for mor
 If using these scripts in your data analyses pipelines, please cite our paper:
 
 Rahmatbakhsh,M. et al. (2022) HPiP: an R/Bioconductor package for predicting host–pathogen protein–protein interactions from protein sequences using ensemble machine learning approach. Bioinforma. Adv., 2, vbac038.
-
-
