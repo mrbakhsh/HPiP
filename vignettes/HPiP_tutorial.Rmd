@@ -1207,22 +1207,12 @@ all predicted human proteins in the predicted network.
 
 For instance, the following command can be used to performs functional 
 enrichment analysis of host protein partners of each pathogen protein:
-```{r, warning=FALSE, message=FALSE, results='hide'}
+```{r, warning=FALSE, message=FALSE, results='hide', eval=FALSE}
 enrich_result <- 
   enrichfindP(ppi,threshold = 0.05,
             sources = "GO",
             p.corrction.method = "bonferroni",
             org = "hsapiens")
-```
-Users can also visualize the result of functional enrichment analysis using the
-following command:
-```{r, fig.width = 7, fig.height = 8}
-enrich_result <- filter(enrich_result, 
-                       str_detect(id, "^ORF8:")  & source == "GO:BP")
-enrichplot(enrich_result,
-           low = "blue",
-           high = "red",
-           cex.size = 12)
 ```
 
 ## Complex Prediction
