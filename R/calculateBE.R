@@ -12,10 +12,6 @@
     #' Al-Barakati, H. J., Saigo, H., and Newman, R. H. (2019).
     #' RF-GlutarySite: a random forest based predictor for glutarylation sites.
     #' \emph{Mol. Omi.} 15, 189–204.
-    #' @examples
-    #' data(UP000464024_df)
-    #' x_df <- calculateBE(UP000464024_df)
-    #' head(x_df, n = 2L)
     calculateBE <- function(x) {
       . <- NULL
       V1 <- NULL
