@@ -791,7 +791,8 @@ sequence into 20 coding values [@al2019rf]. For example, ALa is described as
 (10000000000000000000) while Cys is defined as (01000000000000000000), etc. 
 Thus, the total length of this feature is 400(20 * 20) vectors.
 
-```{r, results='hide', warning=FALSE, eval = FALSE}
+
+ ```{r, results='hide', warning=FALSE, eval = FALSE}
 # using data.frame provided by getFASTA function as data input
 BE_df <- calculateBE(fasta_df)
 #only print out the first 30 elements for the first row 
