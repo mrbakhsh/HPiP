@@ -790,15 +790,15 @@ Binary encoding (BE) can be used to transform each residue in a protein
 sequence into 20 coding values [@al2019rf]. For example, ALa is described as 
 (10000000000000000000) while Cys is defined as (01000000000000000000), etc. 
 Thus, the total length of this feature is 400(20 * 20) vectors.
-```{r, results='hide', warning=FALSE, eval=FALSE}
+
+```{r, results='hide', warning=FALSE, eval = FALSE}
 # using data.frame provided by getFASTA function as data input
 BE_df <- calculateBE(fasta_df)
 #only print out the first 30 elements for the first row 
 BE_df[1, c(2:31)] 
-
 ```
 
-```{r, echo= FALSE, eval=FALSE}
+```{r, echo= FALSE, eval = FALSE}
 ex <- BE_df[1, c(2:31)] 
 #convert df to character vector 
 ex <- structure(as.numeric(ex), names = colnames(ex)) 
@@ -1207,22 +1207,13 @@ all predicted human proteins in the predicted network.
 
 For instance, the following command can be used to performs functional 
 enrichment analysis of host protein partners of each pathogen protein:
-```{r, warning=FALSE, message=FALSE, results='hide'}
+
+```{r, warning=FALSE, message=FALSE, results='hide', eval=FALSE}
 enrich_result <- 
   enrichfindP(ppi,threshold = 0.05,
             sources = "GO",
             p.corrction.method = "bonferroni",
             org = "hsapiens")
-```
-Users can also visualize the result of functional enrichment analysis using the
-following command:
-```{r, fig.width = 7, fig.height = 8}
-enrich_result <- filter(enrich_result, 
-                       str_detect(id, "^ORF8:")  & source == "GO:BP")
-enrichplot(enrich_result,
-           low = "blue",
-           high = "red",
-           cex.size = 12)
 ```
 
 ## Complex Prediction

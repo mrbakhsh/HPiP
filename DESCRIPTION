@@ -1,7 +1,7 @@
 Package: HPiP
 Type: Package
 Title: Host-Pathogen Interaction Prediction
-Version: 1.1.3
+Version: 1.5.3
 Authors@R: c(
     person("Matineh", "Rahmatbakhsh", ,"matinerb.94@gmail.com",c("aut","trl","cre")),
     person("Mohan", "Babu", ,"mohan.babu@uregina.ca", c("led")))
@@ -65,4 +65,4 @@ biocViews:
     StructuralPrediction,
     GenePrediction,
     Network
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.0
